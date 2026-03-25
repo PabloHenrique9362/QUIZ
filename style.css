@@ -15,16 +15,31 @@ button{
     cursor: pointer;
 }
 .container{
-    border: white solid 3px;
+    border: white solid 2px;
     border-radius: 6px;
+
     box-shadow: 0 0 2px 2px;
     width: 90%;
     max-width: 800px;
     padding: 16px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+}
+.perguntas-container{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;   
+}
+.pergunta{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
 }
 
