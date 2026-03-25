@@ -42,4 +42,27 @@ button{
     text-align: center;
     font-weight: bold;
 }
+.respostas-button{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.proxima-pergunta{
+    margin-top: 32px;
+}
+.button{
+    background-color: #4863f7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    height: 48px;
+    padding: 0 32px;
+    transition: filter 0.2s;
+}
+.button:hover{
+    filter: brightness(0.8);
+}
 
