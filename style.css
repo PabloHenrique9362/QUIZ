@@ -63,8 +63,11 @@ button{
     padding: 0 32px;
     transition: filter 0.2s;
 }
-.button:hover{
+.button:not(:disabled):hover{
     filter: brightness(0.8);
+}
+.resposta:disabled {
+    cursor: not-allowed;
 }
 .hide{
     display: none;

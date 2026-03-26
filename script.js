@@ -2,8 +2,10 @@ const $startGameButton = document.querySelector(".iniciar-quiz");
 const $questaoQuiz = document.querySelector(".perguntas-container");
 const $respostasContainer = document.querySelector(".respostas-button");
 const $perguntasContainer = document.querySelector(".pergunta");
+const $proximaPerguntaButton = document.querySelector(".proxima-pergunta")
 
 $startGameButton.addEventListener("click", startGame);
+$proximaPerguntaButton.addEventListener("click", displayNextQuestao)
 
 let qualPergunta = 0
 
@@ -46,7 +48,11 @@ function selectResposta(event) {
     } else {
       button.classList.add("errada")
     }
+    button.disabled = true
   })
+
+  $proximaPerguntaButton.classList.remove("hide")
+  qualPergunta++
 }
 
 
