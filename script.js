@@ -16,9 +16,8 @@ function startGame() {
 }
 
 function displayNextQuestao() {
-    while($respostasContainer.firstChild) {
-        $respostasContainer.removeChild($respostasContainer.firstChild);
-    }
+    resetState()
+
     $perguntasContainer.textContent = perguntas[qualPergunta].pergunta;
     perguntas[qualPergunta].opcoes.forEach(resposta => {
         const novaResposta = document.createElement("button")
@@ -31,6 +30,14 @@ function displayNextQuestao() {
 
         novaResposta.addEventListener("click", selectResposta)
     })
+}
+function resetState() {
+  while($respostasContainer.firstChild) {
+        $respostasContainer.removeChild($respostasContainer.firstChild);
+    }
+
+    document.body.removeAttribute("class")
+    $proximaPerguntaButton.classList.add("hide")
 }
 
 function selectResposta(event) {
