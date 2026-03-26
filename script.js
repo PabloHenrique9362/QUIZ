@@ -36,10 +36,17 @@ function selectResposta(event) {
 
   if(respostaClicada.dataset.correct) {
     document.body.classList.add("correta")
-  }
-  else {
+  } else {
     document.body.classList.add("errada")
   }
+
+  document.querySelectorAll(".resposta").forEach(button => {
+    if (button.dataset.correct) {
+      button.classList.add("correta")
+    } else {
+      button.classList.add("errada")
+    }
+  })
 }
 
 
