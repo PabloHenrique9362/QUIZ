@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Quiz é um simples programa de perguntas e respostas, feito para estudo de JS.
 
-- [Acesse o projeto finalizado, online](https://pablohenrique9362.github.io/Calculadora)
+- [Acesse o projeto finalizado, online](https://pablohenrique9362.github.io/QUIZ)
 
 
 ## :memo: Licença
