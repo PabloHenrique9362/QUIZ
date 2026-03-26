@@ -18,6 +18,10 @@ function startGame() {
 function displayNextQuestao() {
     resetState()
 
+    if (perguntas.length === qualPergunta){
+      return finishGame()
+    }
+
     $perguntasContainer.textContent = perguntas[qualPergunta].pergunta;
     perguntas[qualPergunta].opcoes.forEach(resposta => {
         const novaResposta = document.createElement("button")
@@ -45,6 +49,7 @@ function selectResposta(event) {
 
   if(respostaClicada.dataset.correct) {
     document.body.classList.add("correta")
+    totalCorreta++
   } else {
     document.body.classList.add("errada")
   }
@@ -61,6 +66,29 @@ function selectResposta(event) {
   $proximaPerguntaButton.classList.remove("hide")
   qualPergunta++
 }
+
+function finishGame() {
+  const totalquestao = perguntas.length
+  const perfomance = Math.floor(totalCorreta *100 /totalquestao)
+
+  let message = ""
+  switch (true) {
+    case (perfomance >= 90):
+      message = "Excelente :)"
+      break
+    case (perfomance >= 70):
+      message = "Muito Bom :)"
+      break
+    case (perfomance >= 50):
+      message = "Bom :)"
+      break
+    case (perfomance >= 90):
+      message = "Pode Melhorar :("
+      break     
+  }
+
+}
+
 
 
 
