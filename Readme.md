@@ -27,7 +27,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-A Calculadora é um simples programa funcional e responsivo para fazer contas basicas.
+O Quiz é um simples programa de perguntas e respostas, feito para estudo de JS.
 
 - [Acesse o projeto finalizado, online](https://pablohenrique9362.github.io/Calculadora)
 
