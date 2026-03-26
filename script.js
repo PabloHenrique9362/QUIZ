@@ -21,8 +21,27 @@ function displayNextQuestao() {
     perguntas[qualPergunta].opcoes.forEach(resposta => {
         const novaResposta = document.createElement("button")
         novaResposta.classList.add("button", "resposta")
+        novaResposta.textContent = resposta.text;
+        if(resposta.correct) {
+          novaResposta.dataset.correct = resposta.correct
+        }
+        $respostasContainer.appendChild(novaResposta)
+
+        novaResposta.addEventListener("click", selectResposta)
     })
 }
+
+function selectResposta(event) {
+  const   respostaClicada = event.target;
+
+  if(respostaClicada.dataset.correct) {
+    document.body.classList.add("correta")
+  }
+  else {
+    document.body.classList.add("errada")
+  }
+}
+
 
 
 
