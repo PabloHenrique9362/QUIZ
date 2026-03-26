@@ -78,4 +78,12 @@ button{
 .errada {
     background-color: rgb(190, 0, 0);
 }
+.menssagem {
+    font-size: 20px;
+    text-align: center;
+}
+.menssagem span{
+    display: block;
+    margin: 10px;
+}
 

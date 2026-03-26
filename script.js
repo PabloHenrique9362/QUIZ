@@ -8,6 +8,7 @@ $startGameButton.addEventListener("click", startGame);
 $proximaPerguntaButton.addEventListener("click", displayNextQuestao)
 
 let qualPergunta = 0
+let totalCorreta = 0
 
 function startGame() {
     $startGameButton.classList.add("hide");
@@ -45,7 +46,7 @@ function resetState() {
 }
 
 function selectResposta(event) {
-  const   respostaClicada = event.target;
+  const respostaClicada = event.target;
 
   if(respostaClicada.dataset.correct) {
     document.body.classList.add("correta")
@@ -86,20 +87,15 @@ function finishGame() {
       message = "Pode Melhorar :("
       break     
   }
+  $perguntasContainer.innerHTML = 
+  `<p class="menssagem"> 
+    Você Acertou ${totalCorreta} de ${totalquestao} questões!
+    <span>Resultado: ${message}</span>
+  </p>
+  <button onclick=window.location.reload() class="button">Refazer Teste</button>
+  `
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 const perguntas = [
   {
